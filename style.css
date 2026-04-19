@@ -315,7 +315,7 @@ body {
     font-size: clamp(1.28rem, 1.72vw, 1.7rem);
     font-weight: 300;
     line-height: 1.52;
-    color: #666666;
+    color: #4d4d4d;
 }
 
 .about-copy p + p {
@@ -325,7 +325,7 @@ body {
 .about-intro {
     font-size: clamp(1.45rem, 2vw, 1.85rem);
     font-weight: 300;
-    color: #666666;
+    color: #000000;
 }
 
 .about-link {
