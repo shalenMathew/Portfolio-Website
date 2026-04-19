@@ -748,16 +748,21 @@ body {
     .skills-section {
         padding: 48px 0 44px;
         row-gap: 22px;
+        overflow: hidden;
     }
     .skills-art {
         min-height: 300px;
+        width: 100%;
+        overflow: hidden;
     }
     .skills-art .section-title {
         top: 0;
+        left: 50%;
         font-size: clamp(4.2rem, 22vw, 6rem);
+        max-width: 100%;
     }
     .skills-art img {
-        width: min(430px, 118vw);
+        width: min(430px, 100vw);
         bottom: 0;
     }
     .skills-copy {
@@ -890,6 +895,12 @@ body {
     }
     .skills-art {
         min-height: 270px;
+    }
+    .skills-art .section-title {
+        font-size: clamp(3.7rem, 20vw, 5.1rem);
+    }
+    .skills-art img {
+        width: min(380px, 100vw);
     }
     .skills-copy {
         font-size: 0.96rem;
