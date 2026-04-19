@@ -395,6 +395,7 @@ body {
     border-radius: 30px;
     overflow: hidden;
     background: #050505;
+    display: block;
 }
 
 .project-image img {
@@ -402,6 +403,10 @@ body {
     height: 100%;
     object-fit: cover;
     display: block;
+}
+
+.project-image-light {
+    background: #ffffff;
 }
 
 .project-heading-row {
@@ -430,9 +435,16 @@ body {
 .project-points {
     color: #4d4d4d;
     font-size: clamp(1.25rem, 1.75vw, 1.62rem);
-    font-weight: 300;
+    font-weight: 400;
     line-height: 1.38;
     padding-left: 32px;
+}
+
+.project-summary {
+    color: #4d4d4d;
+    font-size: clamp(1.25rem, 1.75vw, 1.62rem);
+    font-weight: 400;
+    line-height: 1.38;
 }
 
 .project-points li + li {
@@ -644,8 +656,13 @@ body {
     .projects-heading {
         width: min(430px, 96vw);
     }
+    .projects-heading img {
+        width: 78%;
+        transform: translateY(-8px);
+    }
     .projects-heading .section-title {
         top: -4px;
+        left: 44%;
         font-size: clamp(2.9rem, 13.5vw, 4rem);
     }
     .projects-subtitle {
@@ -669,8 +686,15 @@ body {
     }
     .project-points {
         font-size: 1.02rem;
+        font-weight: 400;
         line-height: 1.5;
         padding-left: 24px;
+    }
+    .project-summary {
+        font-size: 1.02rem;
+        font-weight: 400;
+        line-height: 1.5;
+        text-align: center;
     }
     .project-points li + li {
         margin-top: 12px;
