@@ -28,6 +28,7 @@ body {
     background-color: var(--bg-grey);
     color: var(--text-dark);
     font-family: var(--body-font);
+    width: 100%;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
@@ -346,11 +347,13 @@ body {
 
 /* --- 6. RESPONSIVE --- */
 @media (max-width: 1024px) {
-    body { min-height: auto; overflow: auto; padding: 40px 20px; }
+    body { min-height: auto; overflow: auto; padding: 40px 24px; }
     .container {
         grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 100%;
         min-height: auto;
-        gap: 60px;
+        gap: 48px;
         align-items: center;
     }
     .left-col, .right-col {
@@ -361,6 +364,7 @@ body {
     }
     .left-col .top-content {
         align-items: center;
+        width: 100%;
         margin-left: 0;
     }
     .name, .title {
@@ -370,8 +374,21 @@ body {
         margin-left: 0;
         margin-bottom: 0;
     }
+    .navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 14px 24px;
+        width: 100%;
+    }
+    .social-grid {
+        margin: 42px 0;
+        width: min(350px, 100%);
+    }
+    .hero-image {
+        width: min(350px, 100%);
+    }
     .about-section {
-        padding: 32px 0 40px;
+        padding: 56px 0 48px;
     }
     .about-layout {
         grid-template-columns: 1fr;
@@ -395,5 +412,116 @@ body {
     .about-copy {
         max-width: 100%;
         text-align: center;
+    }
+}
+
+@media (max-width: 640px) {
+    body {
+        padding: 28px 18px;
+        overflow-x: hidden;
+    }
+    .container {
+        gap: 38px;
+    }
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        margin-bottom: 18px;
+    }
+    .name {
+        font-size: 1.55rem;
+        margin-bottom: 8px;
+    }
+    .title {
+        font-size: 3.25rem;
+    }
+    .bio {
+        font-size: 1.18rem;
+        line-height: 1.42;
+    }
+    .navigation {
+        gap: 12px 18px;
+        max-width: 100%;
+    }
+    .navigation a {
+        font-size: 1.75rem;
+    }
+    .social-grid {
+        grid-template-columns: repeat(3, 58px);
+        gap: 12px;
+        width: 100%;
+        max-width: 198px;
+        margin: 38px 0;
+    }
+    .icon-box {
+        width: 58px;
+        height: 58px;
+        border-radius: 15px;
+        border-width: 3px;
+        padding: 9px;
+    }
+    .hero-image {
+        width: min(300px, 92vw);
+    }
+    .red-bg-rounded {
+        border-radius: 36px;
+    }
+    .about-section {
+        padding: 48px 0 42px;
+    }
+    .section-title {
+        font-size: clamp(2.85rem, 14vw, 3.7rem);
+        margin-bottom: 28px;
+    }
+    .about-art-card {
+        width: min(272px, 74vw);
+        height: min(476px, 130vw);
+        border-radius: 28px;
+    }
+    .about-art-photo {
+        top: 172px;
+        width: min(218px, 60vw);
+        height: min(132px, 36vw);
+        border-radius: 18px;
+    }
+    .about-art-photo img {
+        width: min(292px, 80vw);
+        transform: translate(-36px, -200px);
+    }
+    .about-copy {
+        font-size: 1.05rem;
+        line-height: 1.55;
+    }
+    .about-intro {
+        font-size: 1.25rem;
+    }
+    .about-copy p + p {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 390px) {
+    body {
+        padding: 24px 14px;
+    }
+    .title {
+        font-size: 2.9rem;
+    }
+    .navigation a {
+        font-size: 1.55rem;
+    }
+    .social-grid {
+        grid-template-columns: repeat(3, 54px);
+        gap: 10px;
+    }
+    .icon-box {
+        width: 54px;
+        height: 54px;
+    }
+    .hero-image {
+        width: min(276px, 92vw);
+    }
+    .about-copy {
+        font-size: 1rem;
     }
 }
