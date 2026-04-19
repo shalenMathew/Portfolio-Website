@@ -263,7 +263,7 @@ body {
 .section-title {
     font-family: var(--graffiti-font);
     color: var(--theme-red);
-    font-size: clamp(3.3rem, 5.4vw, 5.1rem);
+    font-size: clamp(3.5rem, 5.7vw, 5.4rem);
     font-weight: normal;
     line-height: 0.9;
     text-align: center;
@@ -335,6 +335,51 @@ body {
     text-underline-offset: 4px;
 }
 
+.projects-section {
+    width: 100%;
+    max-width: 1280px;
+    padding: 54px 0 84px;
+    animation: fade-up 880ms ease both;
+}
+
+.projects-heading {
+    position: relative;
+    width: min(700px, 70vw);
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-heading img {
+    width: 92%;
+    display: block;
+    position: relative;
+    z-index: 2;
+    transform: translateY(-40px);
+}
+
+.projects-heading .section-title {
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    z-index: 1;
+    transform: translateX(-25%);
+    font-size: clamp(4.1rem, 6.5vw, 6.1rem);
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+.projects-subtitle {
+    max-width: 720px;
+    margin: 58px auto 0;
+    color: #4d4d4d;
+    font-size: clamp(1.30rem, 1.85vw, 1.80rem);
+    font-weight: 300;
+    line-height: 1.45;
+    text-align: center;
+}
+
 @media (prefers-reduced-motion: reduce) {
     *,
     *::before,
@@ -389,6 +434,17 @@ body {
     }
     .about-section {
         padding: 56px 0 48px;
+    }
+    .projects-section {
+        padding: 58px 0 56px;
+    }
+    .projects-heading {
+        width: min(620px, 90vw);
+    }
+    .projects-subtitle {
+        margin-top: 48px;
+        text-align: center;
+        transform: none;
     }
     .about-layout {
         grid-template-columns: 1fr;
@@ -469,6 +525,21 @@ body {
     .about-section {
         padding: 48px 0 42px;
     }
+    .projects-section {
+        padding: 48px 0 44px;
+    }
+    .projects-heading {
+        width: min(430px, 96vw);
+    }
+    .projects-heading .section-title {
+        top: -4px;
+        font-size: clamp(2.9rem, 13.5vw, 4rem);
+    }
+    .projects-subtitle {
+        margin-top: 34px;
+        font-size: 1.15rem;
+        line-height: 1.55;
+    }
     .section-title {
         font-size: clamp(2.85rem, 14vw, 3.7rem);
         margin-bottom: 28px;
@@ -523,5 +594,8 @@ body {
     }
     .about-copy {
         font-size: 1rem;
+    }
+    .projects-subtitle {
+        font-size: 1.05rem;
     }
 }
