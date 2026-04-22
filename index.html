@@ -51,6 +51,13 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <audio id="background-music" loop preload="metadata">
+        <source src="assets/music.m4a" type="audio/mp4">
+    </audio>
+
+    <button class="music-toggle" type="button" aria-label="Play background music" aria-pressed="false">
+        <img src="assets/mute.png" alt="">
+    </button>
 
     <main class="container">
         <section class="left-col">
@@ -286,5 +293,28 @@
         </div>
     </section>
 
+    <script>
+        const music = document.getElementById("background-music");
+        const musicToggle = document.querySelector(".music-toggle");
+        const musicIcon = musicToggle.querySelector("img");
+
+        musicToggle.addEventListener("click", async () => {
+            if (music.paused) {
+                try {
+                    await music.play();
+                    musicIcon.src = "assets/unmute.png";
+                    musicToggle.setAttribute("aria-label", "Pause background music");
+                    musicToggle.setAttribute("aria-pressed", "true");
+                } catch {
+                    musicToggle.setAttribute("aria-label", "Music could not be played");
+                }
+            } else {
+                music.pause();
+                musicIcon.src = "assets/mute.png";
+                musicToggle.setAttribute("aria-label", "Play background music");
+                musicToggle.setAttribute("aria-pressed", "false");
+            }
+        });
+    </script>
 </body>
 </html>
