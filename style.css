@@ -34,7 +34,7 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    padding: 32px 7vw;
+    padding: 18px 7vw 32px;
     overflow-x: hidden;
 }
 
@@ -71,14 +71,14 @@ body {
     justify-content: space-between;
     align-items: flex-start;
     width: 100%;
-    padding-top: 24px;
+    padding-top: 10px;
 }
 
 .right-col { 
     justify-content: space-between; /* Keeps Nav top and Image bottom */
     align-items: flex-end;
     width: 100%;
-    padding-top: 24px;
+    padding-top: 10px;
 }
 
 /* --- LEFT COLUMN CONTENT --- */
@@ -87,7 +87,7 @@ body {
     flex-direction: column;
     align-items: center;
     width: fit-content;
-    margin-top: 24px;
+    margin-top: 10px;
     margin-left: 0;
     animation: fade-up 700ms ease both;
 }
@@ -144,6 +144,7 @@ body {
 .navigation {
     display: flex;
     gap: 28px;
+    margin-bottom: 48px;
 }
 
 .navigation a {
@@ -193,7 +194,7 @@ body {
     display: grid;
     grid-template-columns: repeat(3, 70px); 
     gap: 14px; 
-    margin: auto 0; /* Mathematical centering in the right column */
+    margin: auto 0 34px;
     width: 350px;
     justify-content: center;
     animation: fade-up 760ms ease both;
@@ -758,9 +759,10 @@ body {
         flex-wrap: wrap;
         gap: 14px 24px;
         width: 100%;
+        margin-bottom: 32px;
     }
     .social-grid {
-        margin: 42px 0;
+        margin: 38px 0 24px;
         width: min(350px, 100%);
     }
     .hero-image {
@@ -908,6 +910,7 @@ body {
     .navigation {
         gap: 12px 18px;
         max-width: 100%;
+        margin-bottom: 24px;
     }
     .navigation a {
         font-size: 1.75rem;
@@ -917,7 +920,7 @@ body {
         gap: 12px;
         width: 100%;
         max-width: 198px;
-        margin: 38px 0;
+        margin: 30px 0 18px;
     }
     .icon-box {
         width: 58px;
@@ -1100,6 +1103,7 @@ body {
     }
     .about-intro {
         font-size: 1.25rem;
+        font-weight: 400;
     }
     .about-copy p + p {
         margin-top: 20px;
